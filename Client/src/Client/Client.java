@@ -30,7 +30,7 @@ public class Client {
         System.out.println("Servicio info Clientes: "+url);
         System.out.println(responseBody(url));    
     
-        url = server+"clientes/v1/save?nombre=Penelopez&apellido=Veracruz&edad=18&direccion=CABA&email=karlita@gmail.com&telefono=2323232323&tipoDocumento=PASS&numeroDocumento=31003221";
+        url = server+"clientes/v1/save?nombre=Penelopez&apellido=Veracruz&edad=18&direccion=CABA&email=karlita@gmail.com&telefono=2323232323&tipoDocumento=DNI&numeroDocumento=31003234";
         System.out.println("****************************************************");
         System.out.println("Servicio save: "+url);
         System.out.println(responseBody(url));
@@ -65,12 +65,12 @@ public class Client {
                 }.getType());
         list.forEach(System.out::println);
         
-        url = server+"clientes/v1/byId?id=46";
+        url = server+"clientes/v1/byId?id=51";
         System.out.println("****************************************************");
         System.out.println("Servicio byId: "+url);
         System.out.println(responseBody(url));
         
-        url = server+"clientes/v1/byDocumento?tipoDocumento=DNI&numeroDocumento=12345600";
+        url = server+"clientes/v1/byDocumento?tipoDocumento=DNI&numeroDocumento=31003234";
         System.out.println("****************************************************");
         System.out.println("Servicio byDocumento: "+url);
         System.out.println(responseBody(url));

@@ -69,13 +69,7 @@ public class ClientesService{
     @Produces(MediaType.APPLICATION_JSON)
     public String getById(@QueryParam("id")int id){
         Cliente cliente = cr.getById(id);
-        if(cliente.getId()!=0)
-           return new Gson().toJson(cr.getById(id));
-        else
-        { List<String> respuesta = new ArrayList<>(); 
-           respuesta.add("No encontrado");
-           return new Gson().toJson(respuesta);
-        }   
+        return new Gson().toJson(cliente);
     }
     
     @GET
