@@ -55,6 +55,21 @@ public class Detalle implements Serializable {
     public Detalle() {
     }
 
+    public Detalle(Double precio, Integer cantidad, Articulo idArticulo, Factura idFactura) {
+        this.precio = precio;
+        this.cantidad = cantidad;
+        this.idArticulo = idArticulo;
+        this.idFactura = idFactura;
+    }
+
+    public Detalle(Integer id, Double precio, Integer cantidad, Articulo idArticulo, Factura idFactura) {
+        this.id = id;
+        this.precio = precio;
+        this.cantidad = cantidad;
+        this.idArticulo = idArticulo;
+        this.idFactura = idFactura;
+    }
+
     public Detalle(Integer id) {
         this.id = id;
     }
@@ -121,7 +136,8 @@ public class Detalle implements Serializable {
 
     @Override
     public String toString() {
-        return "ar.org.centro8.curso.java.aplicaciones.entities.Detalle[ id=" + id + " ]";
+        return "Detalle{" + "id=" + id + ", precio=" + precio + ", cantidad=" + cantidad + ", idArticulo=" + idArticulo + ", idFactura=" + idFactura + '}';
     }
-    
+
+        
 }
